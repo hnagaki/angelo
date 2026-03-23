@@ -1,0 +1,19 @@
+{
+  "name": "angelo",
+  "version": "1.0.0",
+  "description": "リストランテアンジェロのWebサイト用のリポジトリです。",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/hnagaki/angelo.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/hnagaki/angelo/issues"
+  },
+  "homepage": "https://github.com/hnagaki/angelo#readme"
+}
