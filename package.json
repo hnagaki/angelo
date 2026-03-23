@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/hnagaki/angelo/issues"
   },
-  "homepage": "https://github.com/hnagaki/angelo#readme"
+  "homepage": "https://github.com/hnagaki/angelo#readme",
+  "dependencies": {
+    "vite": "^8.0.1"
+  }
 }
