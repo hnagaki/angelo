@@ -1,16 +1,16 @@
-import React from "react";
-
-const Footer: React.FC = () => {
+const Footer = () => {
   return (
     <footer
       style={{
+        height: "50px",
         backgroundColor: "#333",
         color: "white",
-        padding: "1rem",
-        textAlign: "center",
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "center",
       }}
     >
-      © 2026 ristorante-angelo. All rights reserved.
+      © 2026 ristorante-angelo
     </footer>
   );
 };

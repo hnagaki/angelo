@@ -1,12 +1,13 @@
-import React from "react";
+import { Link, useLocation } from "react-router-dom";
 
-type Props = {
-  active: string;
-  setActive: (tab: string) => void;
-};
+const Sidebar = () => {
+  const location = useLocation();
 
-const Sidebar: React.FC<Props> = ({ active, setActive }) => {
-  const tabs = ["Home", "About", "Contact"];
+  const menu = [
+    { name: "Home", path: "/" },
+    { name: "About", path: "/about" },
+    { name: "Contact", path: "/contact" },
+  ];
 
   return (
     <aside
@@ -14,24 +15,26 @@ const Sidebar: React.FC<Props> = ({ active, setActive }) => {
         width: "200px",
         backgroundColor: "#2c3e50",
         color: "white",
-        height: "100vh",
         padding: "1rem",
       }}
     >
-      {tabs.map((tab) => (
-        <div
-          key={tab}
-          onClick={() => setActive(tab)}
+      {menu.map((item) => (
+        <Link
+          key={item.path}
+          to={item.path}
           style={{
+            display: "block",
             padding: "0.8rem",
             marginBottom: "0.5rem",
-            cursor: "pointer",
-            backgroundColor: active === tab ? "#34495e" : "transparent",
+            textDecoration: "none",
+            color: "white",
+            backgroundColor:
+              location.pathname === item.path ? "#34495e" : "transparent",
             borderRadius: "6px",
           }}
         >
-          {tab}
-        </div>
+          {item.name}
+        </Link>
       ))}
     </aside>
   );
