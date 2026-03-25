@@ -1,3 +1,4 @@
+import styles from "./Sidebar.module.css";
 import type React from "react";
 import { Link, useLocation } from "react-router-dom";
 
@@ -17,21 +18,10 @@ const Sidebar: React.FC<Props> = ({ isOpen, setIsOpen }) => {
 
   return (
     <aside
-      style={{
-        width: isOpen ? "200px" : "60px",
-        backgroundColor: "#2c3e50",
-        color: "white",
-        padding: "1rem",
-      }}
+      className={`${styles.sidebar} ${isOpen ? styles.open : styles.closed}`}
     >
       {/* トグルボタン */}
-      <div
-        onClick={() => setIsOpen(!isOpen)}
-        style={{
-          cursor: "pointer",
-          marginBottom: "1rem",
-        }}
-      >
+      <div onClick={() => setIsOpen(!isOpen)} className={styles.toggle}>
         {isOpen ? "◀" : "▶"}
       </div>
 
@@ -40,18 +30,9 @@ const Sidebar: React.FC<Props> = ({ isOpen, setIsOpen }) => {
         <Link
           key={item.path}
           to={item.path}
-          style={{
-            display: "block",
-            padding: "0.8rem",
-            marginBottom: "0.5rem",
-            textDecoration: "none",
-            color: "white",
-            backgroundColor:
-              location.pathname === item.path ? "#34495e" : "transparent",
-            borderRadius: "6px",
-          }}
+          className={`${styles.menu} ${location.pathname === item.path ? styles.active : ""}`}
         >
-          <span style={{ marginRight: isOpen ? "8px" : "0" }}>{item.icon}</span>
+          <span>{item.icon}</span>
 
           {/* 閉じているときは文字消す */}
           {isOpen && item.name}
