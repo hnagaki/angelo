@@ -5,9 +5,20 @@
   display: flex;
   align-items: center;
   padding: 0 1rem;
+
+  img {
+    width: 24px;
+    height: 24px;
+    object-fit: contain;
+  }
 }
 
 .h1 {
   margin: 0;
   font-size: 1.2rem;
+}
+
+.icon {
+  width: 24px;
+  height: 24px;
 }
