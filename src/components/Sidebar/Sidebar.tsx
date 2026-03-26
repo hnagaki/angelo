@@ -13,7 +13,7 @@ const Sidebar: React.FC<Props> = ({ isOpen, setIsOpen }) => {
   const menu = [
     { name: "Home", path: "/", icon: "🏠" },
     { name: "Menu", path: "/menu", icon: "ℹ️" },
-    { name: "Interia Photos", path: "/interia-photos", icon: "✉️" },
+    { name: "Interia", path: "/interia", icon: "✉️" },
     { name: "Access", path: "/access", icon: "🚙" },
   ];
 
