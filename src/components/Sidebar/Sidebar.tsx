@@ -1,5 +1,4 @@
 import styles from "./Sidebar.module.css";
-import type React from "react";
 import { Link, useLocation } from "react-router-dom";
 
 type Props = {
@@ -7,7 +6,7 @@ type Props = {
   setIsOpen: (v: boolean) => void;
 };
 
-const Sidebar: React.FC<Props> = ({ isOpen, setIsOpen }) => {
+const Sidebar = ({ isOpen, setIsOpen }: Props) => {
   const location = useLocation();
 
   const menu = [
